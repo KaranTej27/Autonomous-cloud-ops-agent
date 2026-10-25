@@ -1,0 +1,141 @@
+/*
+ * Design tokens. Dark is the default theme; light is selected with data-theme="light".
+ * Chart series slots were validated with the dataviz palette checker:
+ *   dark  on #1a1c20: #3d9a3a #9085e9 #d95926 #3987e5 #c98500  (all checks pass)
+ *   light on #ffffff: #2b8a3e #6250d6 #eb6834 #2a78d6 #eda100  (pass; yellow < 3:1, so charts keep legends and table views)
+ * Severity colours follow the Splunk ES urgency scale and always ship with an icon and a text label.
+ */
+
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  --bg-page: #111215;
+  --bg-topbar: #0b0c0e;
+  --bg-appbar: #17191c;
+  --surface-1: #1a1c20;
+  --surface-2: #212328;
+  --surface-3: #2a2d33;
+  --surface-inset: #141518;
+  --border: #2b2f35;
+  --border-strong: #3b4048;
+
+  --text-primary: #e6e7e9;
+  --text-secondary: #b4b8be;
+  --text-muted: #8b9097;
+  --text-on-fill: #ffffff;
+  --text-on-light-fill: #0b0b0b;
+  --text-good: #6cc06a;
+  --text-bad: #ef7a6e;
+
+  --topbar-text: #e6e7e9;
+  --topbar-muted: #9aa0a6;
+  --topbar-hover: #24272c;
+  --topbar-border: #23262b;
+
+  --link: #4ea7e6;
+  --focus: #4ea7e6;
+  --accent: #2b7f31;
+  --accent-hover: #33913a;
+  --accent-bright: #5cc05c;
+  --danger-button: #b8362b;
+  --danger-button-hover: #cc4236;
+
+  --sev-critical: #dc4e41;
+  --sev-high: #f1813f;
+  --sev-medium: #f8be34;
+  --sev-low: #53a051;
+  --sev-info: #1e93c6;
+
+  --status-good: #53a051;
+  --status-warning: #f8be34;
+  --status-serious: #f1813f;
+  --status-critical: #dc4e41;
+  --status-neutral: #8b9097;
+
+  --series-1: #3d9a3a;
+  --series-2: #9085e9;
+  --series-3: #d95926;
+  --series-4: #3987e5;
+  --series-5: #c98500;
+  --series-muted: #5b6068;
+
+  /* Sequential blue ramp, low to high. On dark, low values recede toward the surface. */
+  --seq-1: #0d366b;
+  --seq-2: #184f95;
+  --seq-3: #256abf;
+  --seq-4: #3987e5;
+  --seq-5: #6da7ec;
+  --seq-6: #9ec5f4;
+  --seq-7: #cde2fb;
+
+  --grid: #2a2d32;
+  --axis: #3b4048;
+  --mark-highlight: rgba(248, 190, 52, 0.28);
+  --overlay: rgba(4, 5, 6, 0.66);
+  --shadow-pop: 0 10px 28px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  --spl-command: #5fb3f0;
+  --spl-keyword: #f0a35a;
+  --spl-field: #86c983;
+  --spl-string: #c4a6f5;
+  --spl-pipe: #8b9097;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-page: #eef0f2;
+  --bg-topbar: #1a1c20;
+  --bg-appbar: #ffffff;
+  --surface-1: #ffffff;
+  --surface-2: #f6f7f8;
+  --surface-3: #eceef0;
+  --surface-inset: #f3f4f6;
+  --border: #dcdfe3;
+  --border-strong: #c4c8ce;
+
+  --text-primary: #16181c;
+  --text-secondary: #454b53;
+  --text-muted: #686e76;
+  --text-good: #2b7f31;
+  --text-bad: #b8362b;
+
+  --topbar-text: #e6e7e9;
+  --topbar-muted: #a3a9b0;
+  --topbar-hover: #2a2d33;
+  --topbar-border: #2a2d33;
+
+  --link: #0b6fb8;
+  --focus: #0b6fb8;
+
+  --series-1: #2b8a3e;
+  --series-2: #6250d6;
+  --series-3: #eb6834;
+  --series-4: #2a78d6;
+  --series-5: #eda100;
+  --series-muted: #b4b9bf;
+
+  --seq-1: #cde2fb;
+  --seq-2: #9ec5f4;
+  --seq-3: #6da7ec;
+  --seq-4: #3987e5;
+  --seq-5: #256abf;
+  --seq-6: #184f95;
+  --seq-7: #0d366b;
+
+  --grid: #e6e8eb;
+  --axis: #c4c8ce;
+  --mark-highlight: rgba(248, 190, 52, 0.45);
+  --overlay: rgba(20, 22, 26, 0.45);
+  --shadow-pop: 0 10px 28px rgba(20, 22, 26, 0.18), 0 0 0 1px rgba(20, 22, 26, 0.08);
+
+  --spl-command: #0b6fb8;
+  --spl-keyword: #b35c00;
+  --spl-field: #2b7f31;
+  --spl-string: #7048c4;
+  --spl-pipe: #686e76;
+}
